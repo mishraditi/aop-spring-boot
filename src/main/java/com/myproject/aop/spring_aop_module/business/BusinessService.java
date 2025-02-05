@@ -5,10 +5,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 @Service
-public class BusinessService1 {
+public class BusinessService {
 public DataService dataService;
 
-    public BusinessService1(DataService dataService) {
+    public BusinessService(DataService dataService) {
         this.dataService = dataService;
     }
     public int calculateMax() {
