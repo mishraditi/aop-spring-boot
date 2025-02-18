@@ -11,8 +11,18 @@ public DataService dataService;
     public BusinessService(DataService dataService) {
         this.dataService = dataService;
     }
-    public int calculateMax() {
+//    public int calculateMax() {
+//        int[] data = dataService.retrieveData();
+//        throw new RuntimeException("something went wrong in the code ");
+////        return Arrays.stream(data).max().orElse(0);
+//    }
+public int calculateMax() {
+    try {
         int[] data = dataService.retrieveData();
-        return Arrays.stream(data).max().orElse(0);
+        throw new RuntimeException("something went wrong in the code");
+        // return Arrays.stream(data).max().orElse(0);
+    } catch (Exception e) {
+        System.err.println("Handled exception: " + e.getMessage());
+        return 0;  // Provide a fallback value
     }
-}
+}}
